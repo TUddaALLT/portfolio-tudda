@@ -10,17 +10,17 @@ menuButton.addEventListener("click", () => {
   menuButton.classList.toggle("open");
 });
 
-var test = document.getElementById("test").innerHTML;
-document.getElementById("test").innerHTML = "";
-console.log(test);
+var info = document.getElementById("info").innerHTML;
+document.getElementById("info").innerHTML = "";
+console.log(info);
 let i = 0;
 var colors = ["#ff0000", "#00ff00", "#0000ff"];
 
 typeWriter = () => {
-  if (i < test.length) {
-    document.getElementById("test").innerHTML += test.substring(i, i + 1);
+  if (i < info.length) {
+    document.getElementById("info").innerHTML += info.substring(i, i + 1);
     var random_color = colors[Math.floor(Math.random() * colors.length)];
-    document.getElementById("test").style.color = random_color;
+    document.getElementById("info").style.color = random_color;
     i++;
     setTimeout(typeWriter, 300);
   }
