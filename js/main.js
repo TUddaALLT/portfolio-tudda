@@ -15,11 +15,11 @@ document.getElementById("info").innerHTML = "";
 console.log(info);
 let i = 0;
 var colors = ["#ff0000", "#00ff00", "#0000ff"];
-
+let random_color;
 typeWriter = () => {
   if (i < info.length) {
     document.getElementById("info").innerHTML += info.substring(i, i + 1);
-    var random_color = colors[Math.floor(Math.random() * colors.length)];
+    random_color = colors[Math.floor(Math.random() * colors.length)];
     document.getElementById("info").style.color = random_color;
     i++;
     setTimeout(typeWriter, 300);
@@ -47,7 +47,32 @@ toTop.addEventListener("click", () => {
 window.onscroll = function () {
   toTheTop();
 };
-darkMode.addEventListener("click", () => {
-  darkMode.classList.add("fa-brightness");
-  darkMode.classList.remove("fa-moon");
+// darkMode.addEventListener("click", () => {
+//   darkMode.classList.add("fa-brightness");
+//   darkMode.classList.remove("fa-moon");
+// });
+const checkbox = document.getElementById("checkbox");
+let check = 0;
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+
+  if (!check) {
+    document.body.style.color = "white";
+    const text = document.getElementsByTagName("*");
+    for (let i = 0; i < text.length; i++) {
+      text[i].style.color = "white";
+    }
+
+    check = 1;
+  } else {
+    document.body.style.color = "black";
+    const text = document.getElementsByTagName("*");
+    for (let i = 0; i < text.length; i++) {
+      text[i].style.color = "black";
+    }
+
+    check = 0;
+  }
+
+  document.getElementById("info").style.color = random_color;
 });

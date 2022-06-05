@@ -13,46 +13,54 @@
     <!-- overlay -->
     <section id="overlay" ></section>
     <!-- header  -->
-    <header>
+    <header style="background-color: transparent;">
       <div class="container">
         <nav class="navbar">
           <!-- 1 logo -->
           <div class="navbar__logo">
-            <img src="./assets/text.svg" alt="logo web" />
+            <img src="./assets/logo.png" alt="logo web"/>
           </div>
           <!-- 2 links  -->
           <ul class="navbar__links">
-            <li class="navbar__link"><a href="#works">Work</a></li>
+            <li class="navbar__link"><a href="#works" >Work</a></li>
             <li class="navbar__link"><a href="#things">About</a></li>
             <li class="navbar__link"><a href="#works">Resume</a></li>
-            <a href="#footer"><button class="navbar__btn">Contact</button></a>
-            <button class="navbar__btn dark " >
-              <i class="fa-solid fa-moon"></i>
-            </button>
+            <a href="#footer"><button class="navbar__btn ">Contact</button></a>
+            <!-- darkmode -->
+            <div class="navbar__link ">
+              <input type="checkbox" class="checkbox " id="checkbox">
+            <label for="checkbox" class="label ">
+              <i class="fas fa-moon "></i>
+              <i class='fas fa-sun'></i>
+              <div class='ball'>
+            </label>
+          </div>
           </ul>
           <div class="navbar__icons">
             <div class="navbar__icon"></div>
           </div>
         </nav>
+        
       </div>
     </header>
     <!-- banner -->
     <section id="banner">
       <div class="container">
+        
         <div class="banner__img">
           <!-- img banner -->
           <img
-            src="https://img.fortawesome.com/1ce05b4b/open-source-illustration.svg"
-            alt="illustration of women"
+            src="./assets/me.png"
+            alt="anhtu"
           />
         </div>
         <!-- // heading banner -->
         <div class="banner__heading">
           <div style="text-align: center;"> 
-            <h1 id="info">Hello, I'm Duong Tu </h1>
+            <h1 id="info">Hello, I'm Duong Tu.</h1>
+            <h2 style="line-height: 50px ; padding-top: 30px; padding-bottom: 30px"> I am a software engineering, I live in Phuc Tho, Ha Noi, Viet Nam</h2>
           </div>
-          <p style="color: rgb(127, 155, 255)">As an aside, you should keep in mind browser compatibility when you're trying to perform animations like this. Older browsers likely will have spotty or no support for this kind of thing, so you should have a fall-back.</p>
-          
+         
           <div style="text-align: center;"> 
             <a href="https://www.facebook.com/all.t.gangz/">
               <button class="banner__btn">View More</button>
@@ -66,7 +74,11 @@
             
           
         </div>
+        <!-- My img -->
+      <div class="dotted">  
+       <img src="./assets/background.svg">
       </div>
+      </div> 
     </section>
     <!-- things to do -->
     <section id="things">
@@ -79,13 +91,13 @@
           <img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" width="300" height="300">
         </div>
         <!-- heading -->
-        <h2>I can do </h2>
+        <h2 >I can do </h2>
         <!-- item 1 -->
         <div class="things__item">
-          <img src="https://www.pngitem.com/pimgs/m/78-787465_javascript-custom-folder-icon-for-windows-javascript-folder.png">
+          <img src="https://topdev.vn/blog/wp-content/uploads/2020/11/hoc-java-co-ban-1.jpg">
           <div class="things__item--heading">
-            <h3>Lorem ipsum dolor sit</h3>
-            <p>As an aside, you should keep in mind browser compatibility when you're trying to perform animations like this. Older browsers likely will have spotty or no support for this kind of thing, so you should have a fall-back.</p>
+            <h3>Backend web with java</h3>
+            <p>I used jsp/servlet to develop website </p>
           </div>
         </div>
         <!-- item 2 -->
@@ -93,8 +105,8 @@
           
           <img src="https://i0.wp.com/phocode.com/wp-content/uploads/2016/09/nodejsLogo.png?fit=300%2C300&ssl=1">
           <div class="things__item--heading">
-            <h3>Lorem ipsum dolor sit</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore velit qui labore! Dolores laudantium iusto accusamus amet sit provident quo?</p>
+            <h3>Backend web with nodejs</h3>
+            <p>I used nodejs, express, mogodb to develop website</p>
           </div>
         </div>
           </div>
@@ -103,8 +115,8 @@
         <div class="things__item">
           <img src="https://camo.githubusercontent.com/48d099290b4cb2d7937bcd96e8497cf1845b54a810a6432c70cf944b60b40c77/68747470733a2f2f7261776769742e636f6d2f676f72616e67616a69632f72656163742d69636f6e732f6d61737465722f72656163742d69636f6e732e737667" alt="placeholder">
           <div class="things__item--heading">
-            <h3>Lorem ipsum dolor sit</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore velit qui labore! Dolores laudantium iusto accusamus amet sit provident quo?</p>
+            <h3> Frameworks Reactjs to dev front end</h3>
+            <p >Html, css, bootstrap, mantines, mui to develop</p>
           </div>
         </div>
       </div>
@@ -148,10 +160,9 @@
         <div><i class="fa-solid fa-phone"></i> <span>0352334588</span></div>
         <h3>Phuc Tho, Ha Noi, Viet Nam </h3>
         <div class="footer__icons">
-         <a href="https://www.facebook.com/all.t.gangz/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
-         <a href="https://github.com/TUddaALLT" target="_blank"> <i class="fa-brands fa-github"></i></a>
-          
-          <a href="mailto:tentufancr7@gmail.com?subject=subject&cc=tentufancr7@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a>
+         <a href="https://www.facebook.com/all.t.gangz/" target="_blank"> <i class="color_icons fa-brands fa-facebook"></i></a>
+         <a href="https://github.com/TUddaALLT" target="_blank"> <i class="color_icons fa-brands fa-github"></i></a>
+        <a href="mailto:tentufancr7@gmail.com?subject=subject&cc=tentufancr7@gmail.com" target="_blank"><i class="color_icons fa-solid fa-square-envelope"></i></a>
         </div>
         </div>
       </div>
@@ -159,6 +170,7 @@
     <div class="toTop"> 
      <a href="#banner"> <i class="fa-solid fa-jet-fighter-up" font-size="1.5"></i> </a>
     </div>
+    
     <script
       src="https://kit.fontawesome.com/a32388110f.js"
       crossorigin="anonymous"
