@@ -47,10 +47,7 @@ toTop.addEventListener("click", () => {
 window.onscroll = function () {
   toTheTop();
 };
-// darkMode.addEventListener("click", () => {
-//   darkMode.classList.add("fa-brightness");
-//   darkMode.classList.remove("fa-moon");
-// });
+
 const checkbox = document.getElementById("checkbox");
 let check = 0;
 checkbox.addEventListener("change", () => {
@@ -60,7 +57,7 @@ checkbox.addEventListener("change", () => {
     document.body.style.color = "white";
     const text = document.getElementsByTagName("*");
     for (let i = 0; i < text.length; i++) {
-      text[i].style.color = "white";
+      text[i].style.color = "rgb(218 155 63)";
     }
 
     check = 1;
