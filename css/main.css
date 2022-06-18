@@ -302,15 +302,20 @@ header {
 #things {
   position: relative;
   overflow-x: hidden;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
-
+.audio {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
 #things h2 {
-  padding: 6em 0;
+  padding: 4em 0;
   text-align: center;
   color: var(--gray);
   margin-bottom: 3em;
 }
+
 .things__dec {
   position: absolute;
   top: 0;
@@ -474,8 +479,8 @@ header {
   }
 }
 .toTop {
-  right: 20px;
-  bottom: 30px;
+  right: 32px;
+  bottom: 90px;
   position: fixed;
   font-size: xx-large;
   color: brown;
@@ -533,4 +538,14 @@ header {
 }
 .white_text {
   color: white;
+}
+.slide img {
+  height: 60vh;
+  object-fit: cover;
+}
+img {
+  transition: transform 0.2s linear;
+}
+img:hover {
+  transform: scale(1.1);
 }
