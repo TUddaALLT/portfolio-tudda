@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Georgia, "Times New Roman", serif;
   background-color: #d3eee9;
+  font-family: "Sans-serif", Arial;
 }
 /* dark mode  */
 
@@ -116,6 +116,11 @@ header {
   background-color: rgb(53, 110, 116);
   margin-left: 45px;
 }
+#info {
+  font-size: 3rem;
+  font-weight: bolder;
+  letter-spacing: -1px;
+}
 /* menu buton */
 .navbar__icons {
   display: flex;
@@ -216,9 +221,7 @@ header {
   width: 250px;
   object-fit: cover;
   height: 250px;
-  border-end-end-radius: 20%;
-  border-end-start-radius: 50%;
-  border-start-end-radius: 50%;
+  border-radius: 50%;
   border: 5px solid rgba(88, 37, 123, 0.7);
 
   /* border-radius: 50%; */
@@ -300,6 +303,7 @@ header {
     justify-content: flex-end;
   }
   .banner__img img {
+    border-radius: initial;
     width: 450px;
     object-fit: cover;
     height: 450px;

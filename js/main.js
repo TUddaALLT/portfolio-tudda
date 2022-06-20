@@ -23,6 +23,10 @@ typeWriter = () => {
     document.getElementById("info").style.color = random_color;
     i++;
     setTimeout(typeWriter, 300);
+  } else {
+    i = 0;
+    document.getElementById("info").innerHTML = "";
+    typeWriter();
   }
 };
 typeWriter();
