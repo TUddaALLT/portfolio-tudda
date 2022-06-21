@@ -82,14 +82,11 @@ checkbox.addEventListener("change", () => {
 const observer = new IntersectionObserver(function (entries) {
   entries.forEach(
     (entry) => {
-      if (entry.intersectionRatio === 0.7) {
-        entry.target.classList.add("animationRight");
-      } else {
-        entry.target.classList.remove("animationRight");
-      }
+      entry.target.classList.toggle("animationRight", entry.isIntersecting);
+      console.log(entry);
     },
     {
-      threshold: 0.7,
+      threshold: 1,
     },
   );
 });
@@ -98,32 +95,48 @@ const targets = document.querySelector(".img_animation");
 
 observer.observe(targets);
 
-//
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.intersectionRatio === 0.5) {
-          console.log("test");
-          entry.target.classList.add("animationRight");
-          entry.target.classList.remove(".img_animation");
-        } else {
-          entry.target.classList.add("animationRight");
-          entry.target.classList.remove(".img_animation");
-        }
-      });
+const observerText = new IntersectionObserver(function (entries) {
+  entries.forEach(
+    (entry) => {
+      entry.target.classList.toggle("animationLeft", entry.isIntersecting);
+      console.log(entry);
     },
     {
-      threshold: 0.5,
+      threshold: 1,
     },
   );
-
-  const elements = document.querySelectorAll(".img_animation");
-
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
 });
+
+const banner__heading = document.querySelector(".banner__heading");
+
+observerText.observe(banner__heading);
+
+//
+// document.addEventListener("DOMContentLoaded", () => {
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.intersectionRatio === 0.5) {
+//           console.log("test");
+//           entry.target.classList.add("animationRight");
+//           entry.target.classList.remove(".img_animation");
+//         } else {
+//           entry.target.classList.add("animationRight");
+//           entry.target.classList.remove(".img_animation");
+//         }
+//       });
+//     },
+//     {
+//       threshold: 0.5,
+//     },
+//   );
+
+//   const elements = document.querySelectorAll(".img_animation");
+
+//   elements.forEach((element) => {
+//     observer.observe(element);
+//   });
+// });
 
 // const leftf = function (entries) {
 //   entries.forEach(
