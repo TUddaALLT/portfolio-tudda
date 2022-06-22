@@ -79,79 +79,24 @@ checkbox.addEventListener("change", () => {
 });
 //animation
 
-const observer = new IntersectionObserver(function (entries) {
-  entries.forEach(
-    (entry) => {
-      entry.target.classList.toggle("animationRight", entry.isIntersecting);
-      console.log(entry);
-    },
-    {
-      threshold: 1,
-    },
-  );
+const rights = document.querySelectorAll(".right_animation");
+
+const right_animation = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("animationRight");
+    }
+  });
 });
+rights.forEach((right) => right_animation.observe(right));
 
-const targets = document.querySelector(".img_animation");
+const lefts = document.querySelectorAll(".left_animation");
 
-observer.observe(targets);
-
-const observerText = new IntersectionObserver(function (entries) {
-  entries.forEach(
-    (entry) => {
-      entry.target.classList.toggle("animationLeft", entry.isIntersecting);
-      console.log(entry);
-    },
-    {
-      threshold: 1,
-    },
-  );
+const left_animation = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("animationLeft");
+    }
+  });
 });
-
-const banner__heading = document.querySelector(".banner__heading");
-
-observerText.observe(banner__heading);
-
-//
-// document.addEventListener("DOMContentLoaded", () => {
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.intersectionRatio === 0.5) {
-//           console.log("test");
-//           entry.target.classList.add("animationRight");
-//           entry.target.classList.remove(".img_animation");
-//         } else {
-//           entry.target.classList.add("animationRight");
-//           entry.target.classList.remove(".img_animation");
-//         }
-//       });
-//     },
-//     {
-//       threshold: 0.5,
-//     },
-//   );
-
-//   const elements = document.querySelectorAll(".img_animation");
-
-//   elements.forEach((element) => {
-//     observer.observe(element);
-//   });
-// });
-
-// const leftf = function (entries) {
-//   entries.forEach(
-//     (entry) => {
-//       entry.target.classList.toggle("animationLeft", entry.isIntersecting);
-//     },
-//     {
-//       threshold: 0.7,
-//     },
-//   );
-// };
-
-// const observer1 = new IntersectionObserver(leftf);
-
-// const lefts = document.querySelectorAll(".banner__heading ");
-// lefts.forEach((left) => {
-//   observer.observe(left);
-// });
+lefts.forEach((left) => left_animation.observe(left));

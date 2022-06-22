@@ -241,13 +241,7 @@ header {
   text-align: center;
   color: var(--gray);
 }
-.animationLeft {
-  /* padding-top: 35vh; */
-  position: absolute;
-  transition: var(--smooth);
-  animation-name: left;
-  animation-duration: 0.5s;
-}
+
 .banner__heading h1 {
   font-size: 2.25rem;
   padding-top: 1em;
@@ -553,9 +547,6 @@ textarea {
     display: block;
     font-size: 50px;
   }
-  /* #footer div {
-    margin: 0;
-  } */
 }
 /* to Top */
 @keyframes spinner {
@@ -720,7 +711,14 @@ img:hover {
   /* position: absolute; */
   transition: var(--smooth);
   animation-name: right;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
+}
+.animationLeft {
+  /* padding-top: 35vh; */
+  /* position: absolute; */
+  transition: var(--smooth);
+  animation-name: left;
+  animation-duration: 1s;
 }
 @keyframes right {
   0% {
@@ -732,7 +730,7 @@ img:hover {
 }
 @keyframes left {
   0% {
-    transform: translate(-950px, -100px);
+    transform: translate(-500px);
   }
   100% {
     transform: translateX(0);
