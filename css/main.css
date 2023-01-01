@@ -13,6 +13,7 @@ html {
 body {
   background-color: #d3eee9;
   font-family: "sans-serif", Arial;
+  overflow-x: hidden;
 }
 /* dark mode  */
 
